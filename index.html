@@ -28,6 +28,50 @@
 
     <!-- Sections -->
     <main id="sections-container"></main>
+    <!-- CERTIFICATION SECTION -->
+    <section class="certification-section">
+      <h2>Our Certifications</h2>
+      <p>We partner only with trusted organizations that verify our ethical, sustainable, and fair trade practices.</p>
+      <div class="certification-icons">
+        <img src="icons/cert1.svg" alt="Certification 1" />
+        <img src="icons/cert2.svg" alt="Certification 2" />
+        <img src="icons/cert3.svg" alt="Certification 3" />
+        <img src="icons/cert4.svg" alt="Certification 4" />
+        <img src="icons/cert5.svg" alt="Certification 5" />
+      </div>
+    </section>
+
+    <!-- CONTACT FORM SECTION -->
+    <section class="form-section">
+      <h2>Stay Connected</h2>
+      <p>We’d love to hear from you. Fill out the form and we’ll get back to you soon.</p>
+      <form id="contactForm" novalidate>
+        <label for="fullname">Full Name*</label>
+        <input type="text" id="fullname" name="fullname" required />
+
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Phone*</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="company">Company (optional)</label>
+        <input type="text" id="company" name="company" />
+
+        <label class="checkbox-group">
+          <input type="checkbox" id="consent" name="consent" required />
+          I agree to how my data will be used.
+        </label>
+
+        <button type="submit">Submit</button>
+        <p id="formMessage" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <p>&copy; 2025 True Grounds. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
   </body>
