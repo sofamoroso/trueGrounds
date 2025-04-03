@@ -52,7 +52,9 @@ body {
   font-family: Arial, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
   line-height: 1.6;
 }
 
@@ -95,7 +97,7 @@ body {
 
 .theme-toggle {
   display: flex;
-  gap: var(--gap-small);
+  gap: var(--gap-medium);
 }
 
 .theme-toggle button {
@@ -103,10 +105,12 @@ body {
   background-color: var(--button-bg);
   color: var(--button-text);
   border: none;
-  border-radius: 5px;
+  border-radius: 30px;
   cursor: pointer;
   font-size: 0.9rem;
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 .theme-toggle button:hover {
@@ -119,18 +123,24 @@ body {
   padding: 4rem 1.5rem 3rem;
   background-color: var(--bg-color);
   color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .main-header h1 {
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: var(--gap-large);
+
   color: inherit;
 }
 
+.main-header h2 {
+  margin-bottom: var(--gap-large);
+}
+
 .main-header p {
-  font-size: 1.125rem;
+  font-size: 1rem;
   max-width: 600px;
   margin: 0 auto;
   color: inherit;
@@ -190,20 +200,29 @@ body {
 
 /* Image & Button */
 .image-preview {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  background-color: #c5c5c5;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-top: var(--gap-large);
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .image-preview img {
-  max-width: 100%;
-  margin-top: var(--gap-small);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: none;
-  border-radius: 8px;
 }
 
 .show-image {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 50%);
   padding: var(--gap-small) var(--gap-large);
   background-color: var(--button-bg);
   color: var(--button-text);
@@ -211,7 +230,9 @@ body {
   border-radius: 4px;
   cursor: pointer;
   font-size: 0.9rem;
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 .show-image:hover {
@@ -344,23 +365,22 @@ footer,
 /* Mobile Adjustments */
 @media (max-width: 600px) {
   .navbar {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    padding: var(--gap-large);
-    gap: var(--gap-large);
+    /* padding: var(--gap-large); */
+    gap: var(--gap-small);
     text-align: center;
   }
 
   .logo {
-    font-size: 1.75rem;
-    line-height: 1.2;
+    font-size: 1rem;
   }
 
   .nav-links {
-    flex-direction: column;
-    gap: var(--gap-medium);
+    flex-direction: row;
     width: auto;
     align-items: center;
+    display: none;
   }
 
   .nav-links a {
@@ -368,21 +388,19 @@ footer,
     font-size: 1rem;
   }
 
-  .theme-toggle {
-    justify-content: center;
-    width: 100%;
-  }
-
   .theme-toggle button {
-    width: 100px;
+    padding: var(--gap-small) var(--gap-medium);
+    width: fit-content;
+    font-size: 0.8rem;
   }
 
   .main-header h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    line-height: 2.3rem;
   }
 
   .main-header p {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   .info-section {
