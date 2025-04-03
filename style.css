@@ -349,6 +349,7 @@ button[type="submit"]:hover {
   color: red;
   font-size: 0.875rem;
   margin-block-start: var(--gap-small);
+  text-align: start;
 }
 
 /* Footer */

@@ -63,3 +63,5 @@ document.addEventListener("click", (e) => {
   }
 });
 
+//Modal for deceptive patterns
+//Form validation
