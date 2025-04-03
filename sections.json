@@ -1,48 +1,48 @@
 [
   {
-    "icon": "svgs/1.svg",
+    "icon": "assets/icon-1.svg",
     "title": "Producers & Production",
     "label": "Sustainable Beginnings",
     "text": "Our journey starts at the source. We partner with dedicated, organic coffee farmers who nurture their land with time-honored practices. By prioritizing biodiversity and natural cultivation methods, we ensure that every coffee plant is grown in harmony with nature and community welfare. This commitment to organic production helps protect local ecosystems while fostering economic growth in underdeveloped areas.",
     "image": "assets/img-1.jpg"
   },
   {
-    "icon": "svgs/2.svg",
+    "icon": "assets/icon-2.svg",
     "title": "Processors",
     "label": "Artisan Craft Meets Eco-Friendly Methods",
     "text": "After harvest, our beans are treated with the utmost care. We work with expert processors who employ environmentally responsible techniques to bring out the natural flavors of the coffee. With water conservation measures and waste reduction practices at every turn, our processing stage is designed to honor both the bean’s quality and our planet.",
     "image": "assets/img-2.jpg"
   },
   {
-    "icon": "svgs/3.svg",
+    "icon": "assets/icon-3.svg",
     "title": "Exporters",
     "label": "Ethical Pathways to Global Markets",
     "text": "Transparency is key as our beans travel the world. Our trusted export partners adhere strictly to fair trade practices, ensuring that every step of the journey is ethical and equitable. By maintaining rigorous standards, we guarantee that the farmers’ hard work and dedication are respected on every international stage.",
     "image": "assets/img-3.jpg"
   },
   {
-    "icon": "svgs/4.svg",
+    "icon": "assets/icon-4.svg",
     "title": "Suppliers",
     "label": "Quality & Fairness in Every Delivery",
     "text": "At True Grounds, our suppliers are more than middlemen—they’re stewards of quality and ethics. Carefully selected for their commitment to sustainability and ethical sourcing, our suppliers ensure that only the finest, fairly traded beans make their way into our process. Their integrity upholds our mission of fairness and environmental responsibility.",
     "image": "assets/img-4.jpg"
   },
   {
-    "icon": "svgs/5.svg",
+    "icon": "assets/icon-5.svg",
     "title": "Intermediaries",
     "label": "Bridging Gaps with Integrity",
     "text": "Between the global export and local supply, our intermediary partners play a crucial role. These dedicated professionals ensure smooth transitions and maintain the integrity of our coffee as it moves through various hands. By upholding strict ethical guidelines and transparency protocols, our intermediaries serve as the trusted link that preserves quality and fairness across borders.",
     "image": "assets/img-5.jpg"
   },
   {
-    "icon": "svgs/6.svg",
+    "icon": "assets/icon-6.svg",
     "title": "Roasters & Roasting",
     "label": "Unlocking Flavor with Heart",
     "text": "Roasting is where science and art converge. Our master roasters work in small batches, perfectly balancing temperature and time to reveal each bean’s unique flavor profile. Every roast is a testament to our commitment to organic integrity and fair trade practices. This careful process not only delivers a premium coffee experience but also preserves the spirit of sustainability and respect for every farmer involved.",
     "image": "assets/img-6.jpg"
   },
   {
-    "icon": "svgs/7.svg",
+    "icon": "assets/icon-7.svg",
     "title": "Distribution to Retailers",
     "label": "Bringing the Story to Your Cup",
     "text": "Finally, our distribution network bridges the gap between our ethical production and your daily cup of coffee. Every retailer receives True Grounds coffee that has been transported with a transparent, sustainable approach. This final step ensures that the trust built at every level—from farmer to roaster—is delivered intact, cup after cup.",
