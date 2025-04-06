@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en" class="eco">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>True Grounds</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="logo">True Grounds</div>
+      <div class="nav-links">
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+      </div>
+      <div class="theme-toggle">
+        <button id="ecoMode">ECO</button>
+        <button id="normalMode">FULL</button>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="main-header">
+      <h1>True Grounds</h1>
+      <h2>From Seed to Cup with Integrity</h2>
+      <p>
+        Our Promise: At True Grounds, we’re not just about great coffee – we’re
+        about a great story. Every cup tells a story of sustainable practices,
+        fair trade, and transparent supply chain practices that honor our
+        partner farmers, the stewards of the land. Here’s how our commitment
+        unfolds across each stage of our journey.
+      </p>
+    </header>
+
+    <!-- Sections -->
+    <main id="sections-container"></main>
+
+    <!-- CERTIFICATION SECTION -->
+    <section class="certification-section">
+      <h2>Our Certifications</h2>
+      <p>
+        We partner only with trusted organizations that verify our ethical,
+        sustainable, and fair trade practices.
+      </p>
+      <div class="certification-icons">
+        <img src="icons/cert1.svg" alt="Certification 1" />
+        <img src="icons/cert2.svg" alt="Certification 2" />
+        <img src="icons/cert3.svg" alt="Certification 3" />
+        <img src="icons/cert4.svg" alt="Certification 4" />
+        <img src="icons/cert5.svg" alt="Certification 5" />
+      </div>
+    </section>
+
+    <!-- DIALOG SECTION-->
+
+    <!-- CONTACT FORM SECTION -->
+    <dialog id="dialog">
+      <section class="form-section">
+        <h2>Want to Learn More?</h2>
+        <p>
+          Fill out the form below and we'll get back to you with all the details
+          you need about our products. Whether you have a question, need a
+          quote, or just want to explore your options — we're here to help.
+        </p>
+        <p>
+          Let's connect! Simply tell us a bit about yourself, and we'll take it
+          from there.
+        </p>
+
+        <!--Accessible form-->
+        <form class="contactForm" id="contactForm" novalidate>
+          <div>
+            <label for="fullname">Full Name *</label>
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              aria-required="true"
+              aria-describedby="error-fullname"
+            />
+            <p id="error-fullname" class="error-message">
+              Full name is required.
+            </p>
+          </div>
+          <div>
+            <label for="email">Email *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              aria-required="true"
+              aria-describedby="error-email"
+            />
+            <p id="error-email" class="error-message">
+              A valid email is required.
+            </p>
+          </div>
+          <div>
+            <label for="phone">Phone *</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="[0-9]{6}"
+              maxlength="6"
+              aria-required="true"
+              aria-describedby="error-phone"
+            />
+            <p id="error-phone" class="error-message">
+              Phone number must be 6 digits.
+            </p>
+          </div>
+          <div>
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" />
+          </div>
+          <div>
+            <label for="chekbox-group">
+              <input
+                type="checkbox"
+                id="consent"
+                name="consent"
+                aria-required="true"
+                aria-describedby="error-consent"
+              />
+              I agree to share my date and how it will be used. *
+            </label>
+            <p id="error-consent" class="error-message">
+              You must give your consent.
+            </p>
+          </div>
+          <button type="submit" id="submitButton" disabled>submit</button>
+        </form>
+      </section>
+    </dialog>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <p>&copy; 2025 True Grounds. All rights reserved.</p>
+    </footer>
+
+    <script src="script1.js"></script>
+  </body>
+</html>
