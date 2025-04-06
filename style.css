@@ -137,6 +137,7 @@ body {
 
 .main-header h2 {
   margin-bottom: var(--gap-large);
+  font-size: 1.25rem;
 }
 
 .main-header p {
