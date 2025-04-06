@@ -52,43 +52,77 @@
       </div>
     </section>
 
-    <!-- CONTACT FORM SECTION -->
-    <section class="form-section">
-      <h2>Want to Learn More?</h2>
-      <p>
-        Fill out the form below and we'll get back to you with all the details you need about our products. 
-        Whether you have a question, need a quote, or just want to explore your options — we're here to help.
-      </p>
-      <p>Let's connect! Simply tell us a bit about yourself, and we'll take it from there.</p>
-      <form id="contactForm" novalidate>
-        <div>
-          <label for="fullname">Full Name*</label>
-          <input type="text" id="fullname" name="fullname" required />
-          <p class="error-message ">This field is mandatory</p>
-        </div>
-        <div>
-          <label for="email">Email*</label>
-          <input type="email" id="email" name="email" required />
-          <p class="error-message ">This field is mandatory</p>
-        </div>
-        <div>
-          <label for="phone">Phone*</label>
-          <input type="tel" id="phone" name="phone" required />
-          <p class="error-message ">Please enter a valid phone number</p>
-        </div>
-        <div>
-          <label for="company">Company (optional)</label>
-          <input type="text" id="company" name="company" />
-        </div>
-          <label class="checkbox-group">
-            <input type="checkbox" id="consent" name="consent" required />
-            I agree to how my data will be used.
-          </label>
-        <button type="submit">Submit</button>
-        <p id="formMessage" aria-live="polite"></p>
-      </form>
-    </section>
 
+       <!-- DIALOG SECTION-->
+
+    <!-- CONTACT FORM SECTION -->
+     <dialog id="dialog">
+      <section class="form-section">
+        <h2>Want to Learn More?</h2>
+        <p>
+          Fill out the form below and we'll get back to you with all the details you need about our products. 
+          Whether you have a question, need a quote, or just want to explore your options — we're here to help.
+        </p>
+        <p>Let's connect! Simply tell us a bit about yourself, and we'll take it from there.</p>
+  
+        <!--Accessible form-->
+        <form class="contactForm" id="contactForm" novalidate>
+          <div>
+            <label for="fullname">Full Name *</label>
+            <input 
+            type="text"
+            id="fullname"
+            name="fullname"
+            aria-required="true"
+            aria-describedby="error-fullname"
+            />
+            <p id="error-fullname" class="error-message">Full name is required.</p>
+          </div>
+          <div>
+            <label for="email">Email *</label>
+            <input
+            type="email"
+            id="email"
+            name="email"
+            aria-required="true"
+            aria-describedby="error-email"
+            />
+            <p id="error-email" class="error-message">A valid email is required.</p>
+          </div>
+          <div>
+            <label for="phone">Phone *</label>
+            <input
+            type="tel"
+            id="phone"
+            name="phone"
+            pattern="[0-9]{6}"
+            maxlength="6"
+            aria-required="true"
+            aria-describedby="error-phone"
+            />
+            <p id="error-phone" class="error-message">Phone number must be 6 digits.</p>
+          </div>
+          <div>
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company"/>
+          </div>
+          <div>
+            <label for="chekbox-group">
+              <input
+              type="checkbox"
+              id="consent"
+              name="consent"
+              aria-required="true"
+              aria-describedby="error-consent"
+              />
+              I agree to share my date and how it will be used. *
+            </label>
+            <p id="error-consent" class="error-message">You must give your consent.</p>
+          </div>
+          <button type="submit" id="submitButton" disabled>submit</button>
+        </form>
+      </section>
+     </dialog>
     <!-- FOOTER -->
     <footer class="site-footer">
       <p>&copy; 2025 True Grounds. All rights reserved.</p>

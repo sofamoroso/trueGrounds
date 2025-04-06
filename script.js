@@ -63,5 +63,91 @@ document.addEventListener("click", (e) => {
   }
 });
 
-//Modal for deceptive patterns
-//Form validation
+
+//Dialog & form validation
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contactForm");
+  const submitButton = document.getElementById("submitButton");
+  const dialog = document.getElementById("dialog");
+
+  //Set validation rules for each of the fields
+  const fields = [
+    {
+      input: form.fullname,
+      errorId: "error-fullname",
+      validate: (value) => value.trim() !== "", //Checks that is not empty
+    },
+    {
+      input: form.email,
+      errorId: "error-email",
+      validate: (value) =>
+        /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value), //Reggex
+    },
+    {
+      input: form.phone,
+      errorId: "error-phone",
+      validate: (value) => /^[0-9]{6}$/.test(value), //Check that has 6 digits
+    },
+    {
+      input: form.consent,
+      errorId: "error-consent",
+      validate: () => form.consent.checked, //Check that it is cheked
+    },
+  ];
+
+ 
+  function validateField({ input, errorId, validate }) {
+    const errorElement = document.getElementById(errorId);
+    const isValid = validate(input.type === "checkbox" ? null : input.value);
+
+    if (!isValid) {
+      input.setAttribute("aria-invalid", "true"); //Adds "aria-invalid" for screen readers
+      errorElement.classList.add("visible"); //Show error message
+    } else {
+      input.removeAttribute("aria-invalid"); 
+      errorElement.classList.remove("visible");
+    }
+
+    return isValid; // Return "true" if valid, "false" otherwise
+  }
+
+
+  function validateFormLive() {
+    const allValid = fields.every(validateField); //Checks if all fields are valid
+    submitButton.disabled = !allValid; //Button disabled if not all fields are valid
+  }
+
+  //Real time validation
+  fields.forEach((field) =>{
+    const{input} = field;
+     const eventType = input.type === "checkbox" ? "change" : "input";
+     input.addEventListener(eventType, validateFormLive);
+
+     input.addEventListener("blur", () => validateField(field)); //Show error on leaving the field
+  })
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    let allValid = true;
+    fields.forEach((field) => {
+      const isFieldValid = validateField(field);
+      if (!isFieldValid) allValid = false; //Set allValid t false if an input check fails
+    });
+
+    if (allValid) {
+      alert("Form submitted successfully!");
+      form.reset();
+      submitButton.disabled = true; // Disable again after reset
+      dialog.closes();
+      document.body.classList.remove("dialog-open");
+    }
+  });
+
+  submitButton.disabled = true;
+
+  setTimeout(() => {
+    dialog.showModal();
+    document.body.classList.add("dialog-open");
+  }, 4000);
+});

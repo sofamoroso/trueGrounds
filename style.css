@@ -296,6 +296,13 @@ body {
   margin-inline: auto;
 }
 
+.contactForm p {
+  text-align: start;
+  margin-block-end: 0;
+  max-width: 500px;
+  margin-inline: auto;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -345,12 +352,55 @@ button[type="submit"]:hover {
   opacity: 0.8;
 }
 
-.error-message {
+/*.error-message {
   color: red;
   font-size: 0.875rem;
   margin-block-start: var(--gap-small);
   text-align: start;
+}*/
+
+.error-message {
+  min-height: 1.2em; /* Enough space for 1 line of text */
+  visibility: hidden;
+  color: red;
+  font-size: 0.9em;
+  margin-top: 4px;
 }
+
+.error-message.visible {
+  visibility: visible;
+}
+
+/*Dialog*/
+
+body.dialog-open main,
+body.dialog-open .site-footer {
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+body.dialog-open {
+  overflow: hidden;
+}
+
+dialog {
+  border: none;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: var(--bg-color);
+  max-width: 500px;
+  width: 90%;
+  margin: auto;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+/* Style the backdrop */
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
 
 /* Footer */
 footer,
