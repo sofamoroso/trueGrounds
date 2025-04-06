@@ -59,26 +59,68 @@
         We’d love to hear from you. Fill out the form and we’ll get back to you
         soon.
       </p>
-      <form id="contactForm" novalidate>
-        <label for="fullname">Full Name*</label>
-        <input type="text" id="fullname" name="fullname" required />
-
-        <label for="email">Email*</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="phone">Phone*</label>
-        <input type="tel" id="phone" name="phone" required />
-
-        <label for="company">Company (optional)</label>
-        <input type="text" id="company" name="company" />
-
-        <label class="checkbox-group">
-          <input type="checkbox" id="consent" name="consent" required />
-          I agree to how my data will be used.
-        </label>
-
-        <button type="submit">Submit</button>
-        <p id="formMessage" aria-live="polite"></p>
+      <form class="contactForm" id="contactForm" novalidate>
+        <div>
+          <label for="fullname">Full Name *</label>
+          <input
+            type="text"
+            id="fullname"
+            name="fullname"
+            aria-required="true"
+            aria-describedby="error-fullname"
+          />
+          <p id="error-fullname" class="error-message">
+            Full name is required.
+          </p>
+        </div>
+        <div>
+          <label for="email">Email *</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            aria-required="true"
+            aria-describedby="error-email"
+          />
+          <p id="error-email" class="error-message">
+            A valid email is required.
+          </p>
+        </div>
+        <div>
+          <label for="phone">Phone *</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            pattern="[0-9]{6}"
+            maxlength="6"
+            aria-required="true"
+            aria-describedby="error-phone"
+          />
+          <p id="error-phone" class="error-message">
+            Phone number must be 6 digits.
+          </p>
+        </div>
+        <div>
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company" />
+        </div>
+        <div>
+          <label for="chekbox-group">
+            <input
+              type="checkbox"
+              id="consent"
+              name="consent"
+              aria-required="true"
+              aria-describedby="error-consent"
+            />
+            I agree to share my date and how it will be used. *
+          </label>
+          <p id="error-consent" class="error-message">
+            You must give your consent.
+          </p>
+        </div>
+        <button type="submit" id="submitButton" disabled>submit</button>
       </form>
     </section>
 

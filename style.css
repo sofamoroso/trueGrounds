@@ -294,6 +294,13 @@ body {
   margin-inline: auto;
 }
 
+.contactForm p {
+  text-align: start;
+  margin-block-end: 0;
+  max-width: 500px;
+  margin-inline: auto;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -343,10 +350,23 @@ button[type="submit"]:hover {
   opacity: 0.8;
 }
 
-.error-message {
+/*.error-message {
   color: red;
   font-size: 0.875rem;
   margin-block-start: var(--gap-small);
+  text-align: start;
+}*/
+
+.error-message {
+  min-height: 1.2em; /* Enough space for 1 line of text */
+  visibility: hidden;
+  color: red;
+  font-size: 0.9em;
+  margin-top: 4px;
+}
+
+.error-message.visible {
+  visibility: visible;
 }
 
 /* Footer */
