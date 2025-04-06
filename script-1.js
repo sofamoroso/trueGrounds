@@ -127,6 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
      input.addEventListener("blur", () => validateField(field)); //Show error on leaving the field
   })
 
+
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     let allValid = true;
@@ -139,10 +140,13 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("Form submitted successfully!");
       form.reset();
       submitButton.disabled = true; // Disable again after reset
-      dialog.closes();
+      dialog.close(); 
       document.body.classList.remove("dialog-open");
+
     }
   });
+
+
 
   submitButton.disabled = true;
 

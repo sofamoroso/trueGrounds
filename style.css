@@ -293,6 +293,7 @@ body {
   margin-block-end: var(--gap-xlarge);
   max-width: 500px;
   margin-inline: auto;
+  color: var(--primary-color);
 }
 
 .contactForm p {
@@ -387,7 +388,6 @@ dialog {
   padding: 2rem;
   border-radius: 1rem;
   background-color: var(--bg-color);
-  max-width: 500px;
   width: 90%;
   margin: auto;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
