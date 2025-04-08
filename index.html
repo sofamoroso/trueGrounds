@@ -61,77 +61,78 @@
 
     <!-- DIALOG SECTION-->
 
-    <!-- CONTACT FORM SECTION -->
-    <section class="form-section">
-      <h2>Stay Connected</h2>
-      <p>
-        We’d love to hear from you. Fill out the form and we’ll get back to you
-        soon.
-      </p>
-      <form class="contactForm" id="contactForm" novalidate>
-        <div>
-          <label for="fullname">Full Name *</label>
-          <input
-            type="text"
-            id="fullname"
-            name="fullname"
-            aria-required="true"
-            aria-describedby="error-fullname"
-          />
-          <p id="error-fullname" class="error-message">
-            Full name is required.
-          </p>
-        </div>
-        <div>
-          <label for="email">Email *</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            aria-required="true"
-            aria-describedby="error-email"
-          />
-          <p id="error-email" class="error-message">
-            A valid email is required.
-          </p>
-        </div>
-        <div>
-          <label for="phone">Phone *</label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            pattern="[0-9]{6}"
-            maxlength="6"
-            aria-required="true"
-            aria-describedby="error-phone"
-          />
-          <p id="error-phone" class="error-message">
-            Phone number must be 6 digits.
-          </p>
-        </div>
-        <div>
-          <label for="company">Company</label>
-          <input type="text" id="company" name="company" />
-        </div>
-        <div>
-          <label for="chekbox-group">
+      <!-- CONTACT FORM SECTION -->
+      <section class="form-section">
+        <h2>Want to Learn More?</h2>
+        <p>
+        Fill out the form below and we'll get back to you with all the details you need about our products. 
+        Whether you have a question,  or just want to explore your options we are open to provide all the information about our brand for an products to ensure full transparency.
+        </p>
+        <p>Simply tell us a bit about yourself, and we'll take it from there.</p>
+        <form class="contactForm" id="contactForm" novalidate>
+          <div>
+            <label for="fullname">Full Name *</label>
             <input
-              type="checkbox"
-              id="consent"
-              name="consent"
+              type="text"
+              id="fullname"
+              name="fullname"
               aria-required="true"
-              aria-describedby="error-consent"
+              aria-describedby="error-fullname"
             />
-            I agree to share my data and how it will be used. *
-          </label>
-          <p id="error-consent" class="error-message">
-            You must give your consent.
-          </p>
-        </div>
-        <button type="submit" id="submitButton" disabled>submit</button>
-      </form>
-    </section>
+            <p id="error-fullname" class="error-message">
+              Full name is required.
+            </p>
+          </div>
+          <div>
+            <label for="email">Email *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              aria-required="true"
+              aria-describedby="error-email"
+            />
+            <p id="error-email" class="error-message">
+              A valid email is required.
+            </p>
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="[0-9]{6}"
+              maxlength="6"
+            />
+            <p class="error-message">
+              A valid email is required.
+            </p>
+          </div>
+          <div>
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" />
+            <p class="error-message">
+              A valid company is required.
+            </p>
+          </div>
+          <div>
+            <label for="chekbox-group"></label>
+              <input
+                type="checkbox"
+                id="consent"
+                name="consent"
+                aria-required="true"
+                aria-describedby="error-consent"
+              />
+              I agree to share my data and how it will be used. *
+            <p id="error-consent" class="error-message">
+              You must give your consent.
+            </p>
+          </div>
+          <button type="submit" id="submitButton" disabled>submit</button>
+        </form>
+      </section>
 
     <!-- FOOTER -->
     <footer class="site-footer">

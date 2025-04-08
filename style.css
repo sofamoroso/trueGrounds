@@ -1,11 +1,11 @@
 :root.eco {
-  --bg-color: #080402;
+  --bg-color: #402D26;
   --text-color: #FDF4E6;
   --primary-color: #FDF4E6;
-  --nav-bg: #111111;
+  --nav-bg: #270D0C;
   --nav-text: #eeeeee;
   --button-bg: #FDF4E6;
-  --button-text: #080402;
+  --button-text: #402D26;
   --gap-small: 0.5rem;
   --gap-medium: 0.75rem;
   --gap-large: 1rem;
@@ -363,9 +363,11 @@ button[type="submit"]:hover {
 .error-message {
   min-height: 1.2em; /* Enough space for 1 line of text */
   visibility: hidden;
-  color: red;
+  background-color: #4F3037;
+  color: #EAA2BF;
   font-size: 0.9em;
   margin-top: 4px;
+  padding-left: 1rem;
 }
 
 .error-message.visible {
