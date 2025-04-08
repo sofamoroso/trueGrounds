@@ -85,11 +85,6 @@ document.addEventListener("DOMContentLoaded", function () {
         /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value), //Reggex
     },
     {
-      input: form.phone,
-      errorId: "error-phone",
-      validate: (value) => /^[0-9]{6}$/.test(value), //Check that has 6 digits
-    },
-    {
       input: form.consent,
       errorId: "error-consent",
       validate: () => form.consent.checked, //Check that it is cheked
