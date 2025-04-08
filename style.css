@@ -1,11 +1,11 @@
 :root.eco {
-  --bg-color: #000000;
-  --text-color: #ffffff;
-  --primary-color: #ffffff;
+  --bg-color: #080402;
+  --text-color: #FDF4E6;
+  --primary-color: #FDF4E6;
   --nav-bg: #111111;
   --nav-text: #eeeeee;
-  --button-bg: #ffffff;
-  --button-text: #000000;
+  --button-bg: #FDF4E6;
+  --button-text: #080402;
   --gap-small: 0.5rem;
   --gap-medium: 0.75rem;
   --gap-large: 1rem;
@@ -21,13 +21,13 @@
 }
 
 :root.normal {
-  --bg-color: #1f4d36;
-  --text-color: #f5f1e6;
-  --primary-color: #f5f1e6;
+  --bg-color: #213D26;
+  --text-color: #FDF4E6;
+  --primary-color: #FDF4E6;
   --nav-bg: #eae6da;
-  --nav-text: #1f4d36;
-  --button-bg: #f5f1e6;
-  --button-text: #1f4d36;
+  --nav-text: #213D26;
+  --button-bg: #FDF4E6;
+  --button-text: #213D26;
   --gap-small: 0.5rem;
   --gap-medium: 0.75rem;
   --gap-large: 1rem;
@@ -288,7 +288,7 @@ body {
   text-align: center;
 }
 
-.form-section p {
+.form-section p:not(.error-message) {
   text-align: center;
   margin-block-end: var(--gap-xlarge);
   max-width: 500px;
@@ -296,7 +296,7 @@ body {
   color: var(--primary-color);
 }
 
-.contactForm p {
+.contactForm p:not(.error-message) {
   text-align: start;
   margin-block-end: 0;
   max-width: 500px;
@@ -345,7 +345,8 @@ button[type="submit"] {
   border-radius: var(--radius);
   cursor: pointer;
   font-size: 1rem;
-  align-self: start;
+  align-self: center;
+  width: 80%;
 }
 
 button[type="submit"]:hover {
@@ -388,10 +389,10 @@ dialog {
   padding: 2rem;
   border-radius: 1rem;
   background-color: var(--bg-color);
-  width: 90%;
+  width: 80%;
   margin: auto;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
-  text-align: left;
+  /*overflow: hidden;*/
 }
 
 /* Style the backdrop */
