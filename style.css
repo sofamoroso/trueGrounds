@@ -122,6 +122,12 @@ body {
   color: var(--button-bg);
 }
 
+.certification-icons img,
+.section-heading img {
+  width: 50px;
+  height: auto;
+}
+
 /* Header */
 .main-header {
   text-align: center;
