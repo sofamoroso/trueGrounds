@@ -1,11 +1,11 @@
 :root.eco {
-  --bg-color: #402D26;
-  --text-color: #FDF4E6;
-  --primary-color: #FDF4E6;
-  --nav-bg: #270D0C;
+  --bg-color: #402d26;
+  --text-color: #fdf4e6;
+  --primary-color: #fdf4e6;
+  --nav-bg: #270d0c;
   --nav-text: #eeeeee;
-  --button-bg: #FDF4E6;
-  --button-text: #402D26;
+  --button-bg: #fdf4e6;
+  --button-text: #402d26;
   --gap-small: 0.5rem;
   --gap-medium: 0.75rem;
   --gap-large: 1rem;
@@ -21,13 +21,13 @@
 }
 
 :root.normal {
-  --bg-color: #213D26;
-  --text-color: #FDF4E6;
-  --primary-color: #FDF4E6;
+  --bg-color: #213d26;
+  --text-color: #fdf4e6;
+  --primary-color: #fdf4e6;
   --nav-bg: #eae6da;
-  --nav-text: #213D26;
-  --button-bg: #FDF4E6;
-  --button-text: #213D26;
+  --nav-text: #213d26;
+  --button-bg: #fdf4e6;
+  --button-text: #213d26;
   --gap-small: 0.5rem;
   --gap-medium: 0.75rem;
   --gap-large: 1rem;
@@ -115,6 +115,11 @@ body {
 
 .theme-toggle button:hover {
   opacity: 0.8;
+}
+
+.theme-toggle button.active {
+  background-color: var(--button-text);
+  color: var(--button-bg);
 }
 
 /* Header */
@@ -363,8 +368,8 @@ button[type="submit"]:hover {
 .error-message {
   min-height: 1.2em; /* Enough space for 1 line of text */
   visibility: hidden;
-  background-color: #4F3037;
-  color: #EAA2BF;
+  background-color: #4f3037;
+  color: #eaa2bf;
   font-size: 0.9em;
   margin-top: 4px;
   padding-left: 1rem;

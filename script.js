@@ -9,13 +9,18 @@ const normalBtn = document.getElementById("normalMode");
 ecoBtn.addEventListener("click", () => {
   html.classList.remove("normal");
   html.classList.add("eco");
+  ecoBtn.classList.add("active");
+  normalBtn.classList.remove("active");
 });
 
 // Apply Normal Theme
 normalBtn.addEventListener("click", () => {
   html.classList.remove("eco");
   html.classList.add("normal");
+  ecoBtn.classList.remove("active");
+  normalBtn.classList.add("active");
 });
+
 
 // populate sections
 
